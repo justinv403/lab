@@ -15,7 +15,7 @@ class Television:
 
     def power(self):
         """
-        This function toggles the power state of the TV object
+        Toggles the power state of the TV object
         """
         
         if self.__status:
@@ -26,7 +26,7 @@ class Television:
 
     def channel_up(self):
         """
-        This function increases the channel of the TV, and goes back to the minimum channel if it is already at its max
+        Increases the channel of the TV, and goes back to the minimum channel if it is already at its max
         """
         if self.__status:
             if self.__channel == Television.MAX_CHANNEL:
@@ -36,7 +36,7 @@ class Television:
 
     def channel_down(self):
         """
-        This function decreases the channel of the TV, and goes to the max if the channel is already at the minimum value
+        Decreases the channel of the TV, and goes to the max if the channel is already at the minimum value
         """
         if self.__status:
             if self.__channel == Television.MIN_CHANNEL:
@@ -46,7 +46,7 @@ class Television:
 
     def volume_up(self):
         """
-        This function increases the volume by 1 as long as the max has not already been reached
+        Increases the volume by 1 as long as the max has not already been reached
         """
         
         if self.__status:
@@ -55,7 +55,7 @@ class Television:
 
     def volume_down(self):
         """
-        This function decreases the volume by 1 as long as the min has not already been reached
+        Decreases the volume by 1 as long as the min has not already been reached
         """
         if self.__status:
             if self.__volume > Television.MIN_VOLUME:
