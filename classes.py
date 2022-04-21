@@ -8,6 +8,8 @@ class Television:
     def __init__(self) -> None:
         """
         Initialization of the TV object
+
+        :param self: Inheritence for object
         """
         self.__channel: int = Television.MIN_CHANNEL
         self.__volume: int = Television.MIN_VOLUME
@@ -16,6 +18,8 @@ class Television:
     def power(self) -> None:
         """
         Toggles the power state of the TV object
+
+        :param self: Inheritence for object
         """
         
         if self.__status:
@@ -27,6 +31,8 @@ class Television:
     def channel_up(self) -> None:
         """
         Increases the channel of the TV, and goes back to the minimum channel if it is already at its max
+
+        :param self: Inheritence for object
         """
         if self.__status:
             if self.__channel == Television.MAX_CHANNEL:
@@ -37,6 +43,8 @@ class Television:
     def channel_down(self) -> None:
         """
         Decreases the channel of the TV, and goes to the max if the channel is already at the minimum value
+
+        :param self: Inheritence for object
         """
         if self.__status:
             if self.__channel == Television.MIN_CHANNEL:
@@ -47,6 +55,8 @@ class Television:
     def volume_up(self) -> None:
         """
         Increases the volume by 1 as long as the max has not already been reached
+
+        :param self: Inheritence for object
         """
         
         if self.__status:
@@ -56,6 +66,8 @@ class Television:
     def volume_down(self) -> None:
         """
         Decreases the volume by 1 as long as the min has not already been reached
+
+        :param self: Inheritence for object
         """
         if self.__status:
             if self.__volume > Television.MIN_VOLUME:
@@ -65,6 +77,7 @@ class Television:
         """
         This method returns the TV status using the format shown in the comments of main.py
 
+        :param self: Inheritence for object
         :return: TV status using the format shown in the comments of main.py
         """
         return "TV status: Is on = " + str(self.__status) +", Channel = " + str(self.__channel) + ", Volume = " + str(self.__volume)
